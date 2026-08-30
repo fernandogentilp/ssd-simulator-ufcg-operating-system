@@ -14,7 +14,7 @@ class DirectMappedFTL:
         self.total_paginas_programadas = 0
         self.total_escritas_logicas = 0
         
-    
+    #só pra esclarecer, lpn = logical page number
     def _endereco_fisico(self, lpn):
         if lpn < 0 or lpn >= self.capacidade_logica:
             raise ValueError(f"LPN {lpn} fora da capacidade lógica. ({self.capacidade_logica})")
