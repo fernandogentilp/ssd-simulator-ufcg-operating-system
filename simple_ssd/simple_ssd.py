@@ -38,4 +38,9 @@ class DirectMappedFTL:
         
         return custo_apagamento + custo_escrita + custo_leitura
     
+    def write_amplification(self):
+        if self.total_escritas_logicas == 0:
+            return 0.0
+        return self.total_paginas_programadas / self.total_escritas_logicas
+    
     
